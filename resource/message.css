@@ -1,0 +1,104 @@
+.message-box{
+    background: #fff;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: .5rem;
+    bottom: .4rem;
+    overflow: auto;
+}
+.message-box .message-item{
+    display: -webkit-flex;
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-flow:row nowrap;
+    padding: .1rem;
+    box-sizing: border-box;
+    position: relative;
+}
+.message-box .message-item:after{
+    content:'';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-bottom:1px solid #dfdfdf;
+    -webkit-transform:scaleY(0.5);
+    transform:scaleY(0.5);
+}
+.message-box .message-item:nth-child(1):before{
+    content:'';
+    width: 100%;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-top:1px solid #dfdfdf;
+    -webkit-transform:scaleY(0.5);
+    transform:scaleY(0.5);
+}
+.message-box .message-header{
+    height: .4rem;
+    border-radius: 50%;
+    overflow: hidden;
+    width: .4rem;
+    margin-right: .1rem;
+    flex-shrink: 0;
+}
+.message-box .message-header img{
+    width: 100%;
+    height: 100%;
+}
+.message-box .message-content{
+   flex: 1;
+   flex-grow: 1;
+   overflow: hidden;
+}
+.message-box .message-content .message-name{
+    font-size: .14rem;
+    color:#404040;   
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.message-box .message-content .message-txt{
+    font-size: .12rem;
+    color:#a4a4a4;
+    margin-top: .05rem; 
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;   
+}
+.message-box .message-info{
+    width: .5rem;
+    box-sizing: border-box;
+    padding: 0 .05rem;
+    text-align: center;
+    flex-shrink: 0;
+}
+.message-box .message-info .message-time{
+    font-size: .12rem;
+    color:#a4a4a4;
+    margin-top: .05rem;
+    text-align: center;
+}
+.message-box .message-info .message-num{
+    font-size: .12rem;
+    color:#fff;
+    margin-top: .05rem;
+    background: red;
+    border-radius: .1rem;
+    padding: .03rem .05rem;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
+
+
+
+
+

@@ -1,0 +1,8 @@
+.tel-box{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: .5rem;
+    bottom: .4rem;
+    overflow: auto;
+}
