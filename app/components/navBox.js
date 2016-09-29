@@ -30,8 +30,7 @@ class navBox extends React.Component{
         var _key=_target.getAttribute("data-key");
         this.setState({
             cur:_key
-        });       
-        console.log(this.refs.tab)                            
+        });                               
     }   
 
     render(){
