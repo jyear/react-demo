@@ -6,6 +6,7 @@ class MessageBox extends React.Component{
     constructor(...props){
         super(...props);
         this.state={
+            nowState:this.props.changeState,
             message:[{
                 id:1,
                 name:'天下三',
@@ -90,11 +91,12 @@ class MessageBox extends React.Component{
     }
     
     render(){
-        var that=this;
+        let that=this;
         let message=this.state.message;
-        console.log(this.refs)
+        let nowState=this.state.nowState();
+        let boxName=nowState.currentId==this.props.currentId?'message-box':'message-box hide'
         return (
-            <div className='message-box'>
+            <div className={boxName}>
                 {
                     message.map((item)=>{
                         item.number=item.number>99?'99':item.number;

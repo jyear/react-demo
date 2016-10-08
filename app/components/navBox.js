@@ -5,46 +5,41 @@ class navBox extends React.Component{
     constructor(...props){
         super(...props)
         this.state={
-            cur:1,
+            nowState:this.props.changeState,
             navData:[{
-                id:1,
                 name:'消息',
+                type:'Message',
                 infoNum:'22'
             },{
-                id:2,
-                name:'电话'
+                type:'Tel',
+                name:'电话',
+                infoNum:'22'
             },{
-                id:3,
                 name:'联系人',
+                type:'Contacts',
                 infoNum:'0'
             },{
-                id:4, 
                 name:'动态',
+                type:'Dynamic',
                 infoNum:'400'
-            }]
-        };     
-        this.changeMenu=this.changeMenu.bind(this);
+            }]       
+        };           
+        this.changeMenu=this.props.changeMenu;
     }    
-    changeMenu(e){   
-        var _target=e.target.className.indexOf('nav-item')==-1?e.target.parentNode:e.target;
-        var _key=_target.getAttribute("data-key");
-        this.setState({
-            cur:_key
-        });                               
-    }   
 
     render(){
        let items =this.state.navData;
-       var that=this;
+       let that=this;
+       let nowState=this.state.nowState();            
        return(
            <div className='navbox'>         
              <div className='nav-container' id="navBox" >      
                 {
-                    items.map((item,index)=>{                                               
-                        var cname=item.id==that.state.cur?'nav-item cur':'nav-item';
+                    items.map((item,index)=>{                                       
+                        var cname=nowState.type[item.type]==nowState.currentId?'nav-item cur':'nav-item';
                         var nname=item.infoNum&&item.infoNum>0?'num':'num hide';
                         var infoNum=item.infoNum>100?'99':item.infoNum;
-                        return <div className={cname} data-key={item.id} key={item.id} onClick={this.changeMenu}>{item.name}<i className={nname}>{infoNum}</i></div>
+                        return <div className={cname} style={{order:nowState.type[item.type]}} data-key={nowState.type[item.type]} key={nowState.type[item.type]} onClick={that.changeMenu}>{item.name}<i className={nname}>{infoNum}</i></div>
                     })
                 }         
              </div>

@@ -9,8 +9,6 @@ class HeaderBox extends React.Component{
             img:this.props.img
         }
     }
-
-
     render(){
         return(
             <div className='header-box'>
@@ -25,7 +23,5 @@ class HeaderBox extends React.Component{
         )
     }
 }
-
-
 
 export default HeaderBox;
