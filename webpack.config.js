@@ -2,8 +2,8 @@ var webpack = require('webpack');
 var Path = require('path');
 module.exports = {
     entry: ['./app/main.js'],
-    output: {
-        path: Path.join(__dirname, './build'),
+    output: {       
+        path: Path.resolve(__dirname, './build'),
         filename: 'bundle.js'
     },
     resolve: {
@@ -21,5 +21,24 @@ module.exports = {
           test:/\.css$/,
           loader:'style!css'
         }]
+    },
+    devServer: {
+        hot: true,
+        inline: true,
+        port: 8080,
+        host: '192.168.1.51',
+        contentBase:'./build'
     }
 };
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../resource/message.css';
 
+import SearchbarBox from './SearchbarBox';
 
 class MessageBox extends React.Component{
     constructor(...props){
@@ -97,6 +98,7 @@ class MessageBox extends React.Component{
         let boxName=nowState.currentId==this.props.currentId?'message-box':'message-box hide'
         return (
             <div className={boxName}>
+                <SearchbarBox />
                 {
                     message.map((item)=>{
                         item.number=item.number>99?'99':item.number;

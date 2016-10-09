@@ -39,6 +39,10 @@
     -webkit-transform:scaleY(0.5);
     transform:scaleY(0.5);
 }
+.message-box .message-item:nth-last-child(1):after{
+    content:'';
+    border:0;
+}
 .message-box .message-header{
     height: .4rem;
     border-radius: 50%;

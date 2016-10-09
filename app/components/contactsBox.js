@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../resource/contacts.css';
 
+import SearchbarBox from './SearchbarBox';
 
 class ContactsBox extends React.Component{
     constructor(...props){
@@ -15,7 +16,9 @@ class ContactsBox extends React.Component{
         let boxName=nowState.currentId==this.props.currentId?'contacts-box':'contacts-box hide'
         return (
             <div className={boxName}>
+                <SearchbarBox />
                 this is contacts!
+                你好啊
             </div>         
         );
 

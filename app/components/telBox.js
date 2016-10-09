@@ -2,6 +2,8 @@
 import React from 'react';
 import '../../resource/tel.css'
 
+import SearchbarBox from './SearchbarBox';
+
 class ProductBox extends React.Component{
     constructor(...props){
       super(...props);
@@ -14,6 +16,7 @@ class ProductBox extends React.Component{
       let boxName=nowState.currentId==this.props.currentId?'tel-box':'tel-box hide'
       return (
         <div className={boxName}>
+        <SearchbarBox />
           this is TelBox!
         </div>
       );

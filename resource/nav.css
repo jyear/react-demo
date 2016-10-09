@@ -45,8 +45,10 @@
     color:#fff;
     text-align: center;
     line-height: .16rem;
-    right: .05rem;
-    top: .12rem;
+    right: 50%;
+    top: 50%;
+    margin-top: -.09rem;
+    margin-right: -.3rem;
     z-index: 1;
     font-size: .12rem;
     font-style: normal;
@@ -55,7 +57,7 @@
     color: #03cf4b;
     /*color:#fff;*/
 }
-.navbox .nav-container .nav-item:before{
+/*.navbox .nav-container .nav-item:before{
     content:'';
     position: absolute;
     left: 0;
@@ -68,7 +70,7 @@
 }
 .navbox .nav-container .nav-item::nth-child(1):before{
     border-left: 0;
-}
+}*/
 .navbox .nav-container .nav-item .num.hide{
     display: none;
 }

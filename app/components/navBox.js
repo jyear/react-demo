@@ -39,7 +39,7 @@ class navBox extends React.Component{
                         var cname=nowState.type[item.type]==nowState.currentId?'nav-item cur':'nav-item';
                         var nname=item.infoNum&&item.infoNum>0?'num':'num hide';
                         var infoNum=item.infoNum>100?'99':item.infoNum;
-                        return <div className={cname} style={{order:nowState.type[item.type]}} data-key={nowState.type[item.type]} key={nowState.type[item.type]} onClick={that.changeMenu}>{item.name}<i className={nname}>{infoNum}</i></div>
+                        return <div className={cname} style={{order:nowState.type[item.type]}} data-key={nowState.type[item.type]} key={nowState.type[item.type]} onClick={that.changeMenu} data-name={item.name}>{item.name}<i className={nname}>{infoNum}</i></div>
                     })
                 }         
              </div>

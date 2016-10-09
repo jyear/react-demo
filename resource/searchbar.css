@@ -1,0 +1,15 @@
+.search-box{
+    box-sizing: border-box;
+    padding:.05rem .1rem;
+}
+.search-box .search-txt{
+    width: 100%;
+    padding: .05rem .1rem;
+    box-sizing: border-box;
+    background: #f1f1f1;
+    outline: none;
+    border-radius: .04rem;
+    border: .01rem solid #f4f4f4;
+    text-align: center;
+    color:#a4a4a4;
+}
