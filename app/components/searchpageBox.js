@@ -23,7 +23,7 @@ class SearchPageBox extends React.Component{
                         <button className='search-cancel' onClick={this.props.closeSearch} data-before={nowState.searchBefore}>取消</button>
                     </div>
                     <div className='search-result'>
-                        
+                        this is the result container!
                     </div>
                 </div>
             </div>

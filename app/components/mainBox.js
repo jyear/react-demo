@@ -7,7 +7,7 @@ import MessageComponent from './messageBox.js';
 import TelComponent from './telBox.js';
 import ContactsComponent from './contactsBox.js';
 import DynamicComponent from './dynamicBox.js';
-import SearchPageBoxComponent from './searchpageBox.js';
+import SearchPageComponent from './searchpageBox.js';
 
 class MainBox extends React.Component{
     constructor(...props){
@@ -20,8 +20,7 @@ class MainBox extends React.Component{
                 Message:1,
                 Tel:2,
                 Contacts:3,
-                Dynamic:4,
-                SearchPage:5
+                Dynamic:4
             },
             searchBefore:3           
         }
@@ -64,7 +63,7 @@ class MainBox extends React.Component{
                 <TelComponent currentId={this.state.type.Tel} openSearch={this.openSearch.bind(this)} changeState={this.changeState.bind(this)} />
                 <ContactsComponent currentId={this.state.type.Contacts} openSearch={this.openSearch.bind(this)} changeState={this.changeState.bind(this)} />
                 <DynamicComponent currentId={this.state.type.Dynamic} openSearch={this.openSearch.bind(this)} changeState={this.changeState.bind(this)} />
-                <SearchPageBoxComponent changeState={this.changeState.bind(this)} closeSearch={this.closeSearch.bind(this)} />
+                <SearchPageComponent changeState={this.changeState.bind(this)} closeSearch={this.closeSearch.bind(this)} />
                 <NavComponent changeMenu={this.changeMenu.bind(this)} changeState={this.changeState.bind(this)} />              
             </div>
         )

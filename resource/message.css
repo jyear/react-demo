@@ -98,6 +98,9 @@
     text-align: center;
     display: inline-block;
 }
+.message-box .message-info .message-num.hide{
+    background: #fff;
+}
 
 
 
