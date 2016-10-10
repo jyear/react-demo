@@ -12,7 +12,7 @@ class SearchPageBox extends React.Component{
         let nowState=this.state.nowState();
         let boxName=nowState.searchPage?'search-page show1':'search-page hide1';  
         //设置自动获取焦点 
-        if(nowState.searchPage){
+        if(nowState.searchPage){            
             document.querySelector("#searchTxt").focus();
         }  
         return (

@@ -9,7 +9,6 @@ class ContactsBox extends React.Component{
         this.state={
            nowState:this.props.changeState
         }
-        console.log(this.props.currentId)
     }
     render(){
         let nowState=this.state.nowState();

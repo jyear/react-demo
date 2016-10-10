@@ -3,8 +3,7 @@ import '../../resource/searchbar.css'
 
 class SearchbarBox extends React.Component{
     constructor(...props){
-        super(...props);
-        
+        super(...props);       
     }
     render(){
         return (
