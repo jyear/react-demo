@@ -23,5 +23,4 @@ let Ajax={
     }
 }
 
-
 export default Ajax;

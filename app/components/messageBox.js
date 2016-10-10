@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../resource/message.css';
 
-import $ from '../../util/ajax.js'
+import Util from '../../util/ajax.js'
 
 import SearchbarBox from './SearchbarBox';
 
@@ -15,7 +15,7 @@ class MessageBox extends React.Component{
     }  
     componentDidMount(){
         let that=this;
-        $.getJson('./message.json').then((data)=>{
+        Util.getJson('./message.json').then((data)=>{
             var parsedata=JSON.parse(data).value;
             that.setState({
                 message:parsedata
@@ -23,7 +23,6 @@ class MessageBox extends React.Component{
             return data;
         });              
     }
-
     render(){
         let that=this;
         let message=this.state.message;
@@ -32,8 +31,7 @@ class MessageBox extends React.Component{
         return (
             <div className={boxName}>
                 <SearchbarBox openSearch={this.props.openSearch} beforeSearchId={this.props.currentId}/>
-                {   
-                    
+                {                       
                     message.map((item)=>{
                         if(item.number){
                             item.number=item.number>99?'99':item.number;
