@@ -1,4 +1,3 @@
-
 let Ajax={
     getJson:(url)=>{
         var  xmlReq;
