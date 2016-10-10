@@ -59,8 +59,6 @@ class MessageBox extends React.Component{
             </div>
         )
     }
-
 }
-
 
 export default MessageBox;
