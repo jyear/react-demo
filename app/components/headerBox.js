@@ -10,7 +10,6 @@ class HeaderBox extends React.Component{
         }
     }
 
-
     render(){
         let name=this.state.nowState().name;
         return(
