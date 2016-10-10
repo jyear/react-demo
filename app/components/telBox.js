@@ -16,7 +16,7 @@ class ProductBox extends React.Component{
       let boxName=nowState.currentId==this.props.currentId?'tel-box':'tel-box hide'
       return (
         <div className={boxName}>
-        <SearchbarBox />
+        <SearchbarBox openSearch={this.props.openSearch} beforeSearchId={this.props.currentId} />
           this is TelBox!
         </div>
       );

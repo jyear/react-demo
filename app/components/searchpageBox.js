@@ -10,15 +10,21 @@ class SearchPageBox extends React.Component{
     }
     render(){
         let nowState=this.state.nowState();
-        let boxName=nowState.currentId==this.props.currentId?'search-page':'search-page hide';
+        let boxName=nowState.searchPage?'search-page show1':'search-page hide1';  
+        //设置自动获取焦点 
+        if(nowState.searchPage){
+            document.querySelector("#searchTxt").focus();
+        }  
         return (
             <div className={boxName}>
-                <div className='search-top'>
-                    <input className='search-txt' type='search' placeholder='搜索' />
-                    <button className='search-cancel'>取消</button>
-                </div>
-                <div className='search-result'>
-                    
+                <div className='search-container'>
+                    <div className='search-top'>
+                        <input id="searchTxt"  className='search-txt' type='search' placeholder='搜索' />
+                        <button className='search-cancel' onClick={this.props.closeSearch} data-before={nowState.searchBefore}>取消</button>
+                    </div>
+                    <div className='search-result'>
+                        
+                    </div>
                 </div>
             </div>
         )

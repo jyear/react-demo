@@ -95,10 +95,10 @@ class MessageBox extends React.Component{
         let that=this;
         let message=this.state.message;
         let nowState=this.state.nowState();
-        let boxName=nowState.currentId==this.props.currentId?'message-box':'message-box hide'
+        let boxName=nowState.currentId==this.props.currentId?'message-box':'message-box hide';
         return (
             <div className={boxName}>
-                <SearchbarBox />
+                <SearchbarBox openSearch={this.props.openSearch} beforeSearchId={this.props.currentId}/>
                 {
                     message.map((item)=>{
                         item.number=item.number>99?'99':item.number;

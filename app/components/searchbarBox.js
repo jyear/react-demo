@@ -4,11 +4,12 @@ import '../../resource/searchbar.css'
 class SearchbarBox extends React.Component{
     constructor(...props){
         super(...props);
+        
     }
     render(){
         return (
             <div className='search-box'>
-                <div className='search-txt'>搜索</div>
+                <div className='search-txt' data-before={this.props.beforeSearchId} onClick={this.props.openSearch}>搜索</div>
             </div>
         )
     }

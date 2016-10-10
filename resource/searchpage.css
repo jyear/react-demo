@@ -1,12 +1,20 @@
 .search-page{
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 2;
-        background: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;  
+    background: #fff;
+    display: none;
 }
+.search-page.hide1{   
+    display: none;
+}
+.search-page.show1{
+    display: block;
+}
+
 .search-page .search-top{
     padding: .05rem .1rem;
     box-sizing: border-box;
