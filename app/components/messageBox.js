@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../resource/message.css';
 
-import Util from '../../util/ajax.js'
+import Util from '../../util/util.js'
 
 import SearchbarBox from './SearchbarBox';
 
@@ -12,7 +12,7 @@ class MessageBox extends React.Component{
             nowState:this.props.changeState, 
             message:[]       
         }
-    }  
+    }
     componentDidMount(){
         let that=this;
         Util.getJson('./message.json').then((data)=>{
