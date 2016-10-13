@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{Component} from 'react';
 
 //引入组件
 import HeaderComponent from './headerBox.js';
@@ -9,7 +9,7 @@ import ContactsComponent from './contactsBox.js';
 import DynamicComponent from './dynamicBox.js';
 import SearchPageComponent from './searchpageBox.js';
 
-class MainBox extends React.Component{
+class MainBox extends Component{
     constructor(...props){
         super(...props);
         this.state={

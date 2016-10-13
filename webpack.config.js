@@ -26,8 +26,7 @@ module.exports = {
         hot: true,
         inline: true,
         port: 8080,
-        host: '192.168.1.51',
-        contentBase:'./build'
+        host: '192.168.1.51'
     }
 };
 

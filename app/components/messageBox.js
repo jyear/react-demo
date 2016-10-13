@@ -15,13 +15,13 @@ class MessageBox extends React.Component{
     }
     componentDidMount(){
         let that=this;
-        Util.getJson('./message.json').then((data)=>{
+        Util.getJson('./data/message.json').then((data)=>{
             var parsedata=JSON.parse(data).value;
             that.setState({
                 message:parsedata
             })
             return data;
-        });              
+        });
     }
     render(){
         let that=this;
